@@ -109,7 +109,8 @@ export default class SettingsSetupList extends Component {
       <SetupListRoot>
         <div className="px2">
           <h2>{t`Getting set up`}</h2>
-          <p className="mt1">{t`A few things you can do to get the most out of Metabase.`}</p>
+          {/* #start# del "of metabase" */}
+          <p className="mt1">{t`A few things you can do to get the most out.`}</p>
           <LoadingAndErrorWrapper
             loading={!this.state.tasks}
             error={this.state.error}
@@ -130,9 +131,11 @@ export default class SettingsSetupList extends Component {
           </LoadingAndErrorWrapper>
         </div>
 
-        {!MetabaseSettings.isHosted() && !MetabaseSettings.isEnterprise() && (
+        {/* #start# have you server maintained */}
+        {/* {!MetabaseSettings.isHosted() && !MetabaseSettings.isEnterprise() && (
           <MarginHostingCTA tagline={t`Have your server maintained for you.`} />
-        )}
+        )} */}
+          {/* #end# have you server maintained */}
       </SetupListRoot>
     );
   }

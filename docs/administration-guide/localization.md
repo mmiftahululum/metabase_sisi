@@ -55,7 +55,7 @@ The **Localization** settings can be found in the **Admin Panel** under the **Se
 
 ### Instance language
 
-The default language for all users across the Metabase UI, system emails, pulses, and alerts. Users can pick a different language from their own account settings page.
+The default language for all users across the UI, system emails, pulses, and alerts. Users can pick a different language from their own account settings page.
 
 ### First day of the week
 

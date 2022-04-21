@@ -5,6 +5,7 @@ import ExternalLink from "metabase/core/components/ExternalLink";
 import SettingHeader from "../SettingHeader";
 
 export const EmbeddingCustomizationInfo = () => {
+    // #start# hide p
   const setting = {
     display_name: "Customization",
     description: (

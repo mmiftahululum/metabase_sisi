@@ -56,7 +56,7 @@ The email address users should be referred to if they encounter a problem.
 Type: boolean<br>
 Default: `true`
 
-Enable the collection of anonymous usage data in order to help Metabase improve.
+Enable the collection of anonymous usage data
 
 ### `MB_API_KEY`
 
@@ -802,7 +802,7 @@ The absolute maximum time to keep any cached query results, in seconds. The defa
 Type: integer<br>
 Default: `60`
 
-Metabase will cache all saved questions with an average query execution time longer than this many seconds.
+App will cache all saved questions with an average query execution time longer than this many seconds.
 
 ### `MB_QUERY_CACHING_TTL_RATIO`
 
@@ -1006,7 +1006,7 @@ The default language for this Metabase instance. This only applies to emails, Pu
 Type: string<br>
 Default: `"Metabase"`
 
-The name used for this instance of Metabase.
+The name used for this instance.
 
 ### `MB_SITE_URL`
 

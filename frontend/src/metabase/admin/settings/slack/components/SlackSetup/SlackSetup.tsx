@@ -45,7 +45,7 @@ interface SetupHeaderProps {
 const SetupHeader = ({ isBot, isValid }: SetupHeaderProps): JSX.Element => {
   return (
     <HeaderRoot>
-      <HeaderTitle>{t`Metabase on Slack`}</HeaderTitle>
+      <HeaderTitle>{t`Slack`}</HeaderTitle>
       {isBot ? (
         <HeaderMessage>
           <SlackBadge isBot={isBot} isValid={isValid} />{" "}
@@ -55,7 +55,7 @@ const SetupHeader = ({ isBot, isValid }: SetupHeaderProps): JSX.Element => {
         </HeaderMessage>
       ) : (
         <HeaderMessage>
-          {t`Bring the power of Metabase to your Slack #channels.`}{" "}
+          {t`Bring the power to your Slack #channels.`}{" "}
           {t`Follow these steps to connect to Slack:`}
         </HeaderMessage>
       )}
@@ -95,7 +95,7 @@ const CreateAppSection = ({ manifest }: CreateAppSectionProps): JSX.Element => {
   return (
     <SetupSection title={t`1. Create your Slack App`}>
       <SectionMessage>
-        {t`Click the button below to begin creating your Slack App using the Metabase configuration.`}{" "}
+        {t`Click the button below to begin creating your Slack App using the configuration.`}{" "}
         {jt`Once created, click “${(
           <strong key="install">{t`Install to workspace`}</strong>
         )}” to authorize it.`}

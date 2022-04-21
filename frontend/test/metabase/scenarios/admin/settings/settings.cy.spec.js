@@ -22,7 +22,7 @@ describe("scenarios > admin > settings", () => {
     cy.onlyOn(isOSS);
     cy.visit("/admin/settings/setup");
     cy.findByText("Have your server maintained for you.");
-    cy.findByText("Migrate to Metabase Cloud.");
+    cy.findByText("Migrate to Cloud.");
     cy.findAllByRole("link", { name: "Learn more" })
       .should("have.attr", "href")
       .and("include", "/migrate/");
@@ -257,7 +257,7 @@ describe("scenarios > admin > settings", () => {
   });
 
   // Unskip when mocking Cloud in Cypress is fixed (#18289)
-  it.skip("should hide self-hosted settings when running Metabase Cloud", () => {
+  it.skip("should hide self-hosted settings when running App Cloud", () => {
     setupMetabaseCloud();
     cy.visit("/admin/settings/general");
 
@@ -269,11 +269,11 @@ describe("scenarios > admin > settings", () => {
   });
 
   // Unskip when mocking Cloud in Cypress is fixed (#18289)
-  it.skip("should hide the store link when running Metabase Cloud", () => {
+  it.skip("should hide the store link when running App Cloud", () => {
     setupMetabaseCloud();
     cy.visit("/admin/settings/general");
 
-    cy.findByText("Metabase Admin");
+    cy.findByText("Admin");
     cy.findByLabelText("store icon").should("not.exist");
   });
 
@@ -281,7 +281,7 @@ describe("scenarios > admin > settings", () => {
     it("should present the form and display errors", () => {
       cy.visit("/admin/settings/slack");
 
-      cy.findByText("Metabase on Slack");
+      cy.findByText("Slack");
       cy.findByLabelText("Slack Bot User OAuth Token").type("xoxb");
       cy.findByLabelText("Slack channel name").type("metabase_files");
       cy.button("Save changes").click();
@@ -297,10 +297,10 @@ describeOSS("scenarios > admin > settings (OSS)", () => {
     cy.signInAsAdmin();
   });
 
-  it("should show the store link when running Metabase OSS", () => {
+  it("should show the store link when running App OSS", () => {
     cy.visit("/admin/settings/general");
 
-    cy.findByText("Metabase Admin");
+    cy.findByText("Admin");
     cy.findByLabelText("store icon");
   });
 });
@@ -312,7 +312,7 @@ describeEE("scenarios > admin > settings (EE)", () => {
   });
 
   // Unskip when mocking Cloud in Cypress is fixed (#18289)
-  it.skip("should hide Enterprise page when running Metabase Cloud", () => {
+  it.skip("should hide Enterprise page when running App Cloud", () => {
     setupMetabaseCloud();
     cy.visit("/admin/settings/general");
 
@@ -320,10 +320,10 @@ describeEE("scenarios > admin > settings (EE)", () => {
     cy.findByText("Enterprise").should("not.exist");
   });
 
-  it("should hide the store link when running Metabase EE", () => {
+  it("should hide the store link when running App EE", () => {
     cy.visit("/admin/settings/general");
 
-    cy.findByText("Metabase Admin");
+    cy.findByText("Admin");
     cy.findByLabelText("store icon").should("not.exist");
   });
 });

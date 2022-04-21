@@ -46,7 +46,7 @@ describe("SettingsUpdatesForm", () => {
     versionIsLatestSpy.mockImplementation(() => true);
 
     render();
-    screen.getByText("Migrate to Metabase Cloud.");
+    screen.getByText("Migrate to Cloud.");
 
     versionIsLatestSpy.mockRestore();
   });
@@ -56,7 +56,7 @@ describe("SettingsUpdatesForm", () => {
     versionIsLatestSpy.mockImplementation(() => false);
 
     render();
-    expect(screen.queryByText("Migrate to Metabase Cloud.")).toBeNull();
+    expect(screen.queryByText("Migrate to Cloud.")).toBeNull();
 
     versionIsLatestSpy.mockRestore();
   });

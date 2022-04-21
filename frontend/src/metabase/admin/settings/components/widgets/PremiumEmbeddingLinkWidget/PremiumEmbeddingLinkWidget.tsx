@@ -5,8 +5,9 @@ import { PremiumEmbeddingLinkWidgetRoot } from "./PremiumEmbeddingLinkWidget.sty
 
 export const PremiumEmbeddingLinkWidget = () => {
   return (
+    // #start# active license
     <PremiumEmbeddingLinkWidgetRoot>
-      {t`Have a Premium Embedding license?`}{" "}
+      {t`Have a Premium Embedding license ?`}{" "}
       <Link
         to="/admin/settings/premium-embedding-license"
         className="link"

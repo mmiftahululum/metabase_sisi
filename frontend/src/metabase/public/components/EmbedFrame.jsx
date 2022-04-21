@@ -44,6 +44,7 @@ export default class EmbedFrame extends Component {
     } = this.props;
     const { innerScroll } = this.state;
 
+    console.log(MetabaseSettings.hideEmbedBranding());
     const showFooter = !MetabaseSettings.hideEmbedBranding() || actionButtons;
 
     const { bordered, titled, theme, hide_parameters } = {
@@ -91,11 +92,14 @@ export default class EmbedFrame extends Component {
             {children}
           </div>
         </div>
+     
         {showFooter && (
           <div className="EmbedFrame-footer p1 md-p2 lg-p3 border-top flex-no-shrink flex align-center">
-            {!MetabaseSettings.hideEmbedBranding() && (
+               {/* #start# menghilangkan embed powereb by metabase */}
+            {/* {!MetabaseSettings.hideEmbedBranding() && (
               <LogoBadge dark={theme} />
-            )}
+            )} */}
+               {/* #end# menghilangkan embed powereb by metabase */}
             {actionButtons && (
               <div className="flex-align-right text-medium">
                 {actionButtons}

@@ -43,6 +43,7 @@ function AppBar({
 
   return (
     <AppBarRoot id="mainAppBar">
+      {/* #start# logo icon */}
       <LogoIconWrapper>
         <Link
           to="/"

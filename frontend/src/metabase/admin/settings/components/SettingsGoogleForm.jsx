@@ -48,8 +48,9 @@ export default class SettingsGoogleForm extends Component {
           className="mb2"
         />
         <h2>{t`Sign in with Google`}</h2>
-        <p className="text-medium">
-          {t`Allows users with existing Metabase accounts to login with a Google account that matches their email address in addition to their Metabase username and password.`}
+        {/* #start# deleted metabase  */}
+        {/* <p className="text-medium">
+          {t`Allows users with existing App accounts to login with a Google account that matches their email address in addition to their Metabase username and password.`} 
         </p>
         <p className="text-medium">
           {jt`To allow users to sign in with Google you'll need to give Metabase a Google Developers console application client ID. It only takes a few steps and instructions on how to create a key can be found ${(
@@ -63,7 +64,7 @@ export default class SettingsGoogleForm extends Component {
               {t`here`}
             </ExternalLink>
           )}.`}
-        </p>
+        </p> */}
         <FormField
           {...settingField("google-auth-client-id")}
           title={t`Client ID`}

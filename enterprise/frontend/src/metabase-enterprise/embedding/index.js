@@ -6,6 +6,9 @@ import MetabaseSettings from "metabase/lib/settings";
 import { hasPremiumFeature } from "metabase-enterprise/settings";
 import { PLUGIN_ADMIN_SETTINGS_UPDATES } from "metabase/plugins";
 
+console.log('hasPremiumFeature("embedding")');
+console.log(hasPremiumFeature("embedding"));
+
 if (hasPremiumFeature("embedding")) {
   MetabaseSettings.hideEmbedBranding = () => true;
 }

@@ -105,9 +105,10 @@ export default class SettingsEmailForm extends Component {
             </React.Fragment>
           )}
         />
-        {!MetabaseSettings.isHosted() && !MetabaseSettings.isEnterprise() && (
+        {/* #Start# hide to email configurated */}
+        {/* {!MetabaseSettings.isHosted() && !MetabaseSettings.isEnterprise() && (
           <MarginHostingCTA tagline={t`Have your email configured for you.`} />
-        )}
+        )} */}
       </EmailFormRoot>
     );
   }

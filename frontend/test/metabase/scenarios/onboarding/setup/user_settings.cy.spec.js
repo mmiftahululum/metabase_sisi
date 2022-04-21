@@ -71,7 +71,7 @@ describe("user > settings", () => {
     cy.signOut();
     cy.visit("/account/profile");
     cy.url().should("include", "/auth/login");
-    cy.findByText("Sign in to Metabase");
+    cy.findByText("Sign in to app");
   });
 
   it("should redirect to the login page when the user has changed the password and logged out (metabase#18151)", () => {
@@ -85,7 +85,7 @@ describe("user > settings", () => {
 
     cy.findByLabelText("gear icon").click();
     cy.findByText("Sign out").click();
-    cy.findByText("Sign in to Metabase");
+    cy.findByText("Sign in to App");
   });
 
   describe("when user is authenticated via ldap", () => {

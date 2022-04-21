@@ -15,7 +15,7 @@ const { admin, normal, nocollection, nodata } = USERS;
 const new_user = {
   first_name: "Barb",
   last_name: "Tabley",
-  email: "new@metabase.test",
+  email: "new@app.test",
 };
 
 describe("smoketest > admin_setup", () => {
@@ -69,7 +69,7 @@ describe("smoketest > admin_setup", () => {
       cy.findByText("Settings").click();
       cy.findByText("Email").click();
 
-      cy.findByText("Email address you want to use as the sender of Metabase.");
+      cy.findByText("Email address you want to use as the sender.");
       cy.findByText("Sample Database").should("not.exist");
 
       // Email info
@@ -79,7 +79,7 @@ describe("smoketest > admin_setup", () => {
       cy.findByLabelText("SMTP Username").type("admin");
       cy.findByLabelText("SMTP Password").type("admin");
 
-      cy.findByLabelText("From Address").type("mailer@metabase.test");
+      cy.findByLabelText("From Address").type("mailer@app.test");
 
       cy.button("Save changes").click();
       cy.findByText("Changes saved!");
@@ -95,7 +95,7 @@ describe("smoketest > admin_setup", () => {
 
       cy.findByText("Create a Slack Bot User for MetaBot");
       cy.contains(
-        'Once you\'re there, give it a name and click "Add bot integration". Then copy and paste the Bot API Token into the field below. Once you are done, create a "metabase_files" channel in Slack. Metabase needs this to upload graphs.',
+        'Once you\'re there, give it a name and click "Add bot integration". Then copy and paste the Bot API Token into the field below. Once you are done, create a "files" channel in Slack. App needs this to upload graphs.',
       );
     });
 

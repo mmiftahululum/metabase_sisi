@@ -39,12 +39,12 @@
       (ee-sso-configured?)))
 
 (defsetting check-for-updates
-  (deferred-tru "Identify when new versions of Metabase are available.")
+  (deferred-tru "Identify when new versions are available.")
   :type    :boolean
   :default true)
 
 (defsetting version-info
-  (deferred-tru "Information about available versions of Metabase.")
+  (deferred-tru "Information about available versions.")
   :type    :json
   :default {})
 
@@ -55,7 +55,7 @@
   :default    nil)
 
 (defsetting site-name
-  (deferred-tru "The name used for this instance of Metabase.")
+  (deferred-tru "The name used for this instance.")
   :default "Metabase")
 
 ;; `::uuid-nonce` is a Setting that sets a site-wide random UUID value the first time it is fetched.
@@ -76,7 +76,7 @@
 
 (defsetting site-uuid
   ;; Don't i18n this docstring because it's not user-facing! :)
-  "Unique identifier used for this instance of Metabase. This is set once and only once the first time it is fetched via
+  "Unique identifier used for this instance. This is set once and only once the first time it is fetched via
   its magic getter. Nice!"
   :visibility :internal
   :setter     :none
@@ -129,7 +129,7 @@
               (setting/set-value-of-type! :string :site-url new-value))))
 
 (defsetting site-locale
-  (str (deferred-tru "The default language for all users across the Metabase UI, system emails, pulses, and alerts.")
+  (str (deferred-tru "The default language for all users across the App UI, system emails, pulses, and alerts.")
        " "
        (deferred-tru "Users can individually override this default language from their own account settings."))
   :default    "en"
@@ -145,7 +145,7 @@
   :visibility :authenticated)
 
 (defsetting anon-tracking-enabled
-  (deferred-tru "Enable the collection of anonymous usage data in order to help Metabase improve.")
+  (deferred-tru "Enable the collection of anonymous usage data in order to help improve.")
   :type       :boolean
   :default    true
   :visibility :public)

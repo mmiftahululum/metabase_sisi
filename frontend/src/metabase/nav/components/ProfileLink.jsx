@@ -62,23 +62,25 @@ export default class ProfileLink extends Component {
         event: `Navbar;Profile Dropdown;Activity ${tag}`,
         onClose: handleCloseNavbar,
       },
-      {
-        title: t`Help`,
-        icon: null,
-        link:
-          isAdmin && MetabaseSettings.isPaidPlan()
-            ? "https://www.metabase.com/help-premium?utm_source=in-product&utm_medium=menu&utm_campaign=help"
-            : "https://www.metabase.com/help?utm_source=in-product&utm_medium=menu&utm_campaign=help",
+      //  #start# hide about metabase menu
+      // {
+      //   title: t`Help`,
+      //   icon: null,
+      //   link:
+      //     isAdmin && MetabaseSettings.isPaidPlan()
+      //       ? "https://www.metabase.com/help-premium?utm_source=in-product&utm_medium=menu&utm_campaign=help"
+      //       : "https://www.metabase.com/help?utm_source=in-product&utm_medium=menu&utm_campaign=help",
 
-        externalLink: true,
-        event: `Navbar;Profile Dropdown;About ${tag}`,
-      },
-      {
-        title: t`About Metabase`,
-        icon: null,
-        action: () => this.openModal("about"),
-        event: `Navbar;Profile Dropdown;About ${tag}`,
-      },
+      //   externalLink: true,
+      //   event: `Navbar;Profile Dropdown;About ${tag}`,
+      // },
+      //  #start# hide about metabase menu
+      // {
+      //   title: t`About Metabase`,
+      //   icon: null,
+      //   action: () => this.openModal("about"),
+      //   event: `Navbar;Profile Dropdown;About ${tag}`,
+      // },
       {
         title: t`Sign out`,
         icon: null,

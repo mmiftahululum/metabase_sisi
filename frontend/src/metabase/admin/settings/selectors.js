@@ -120,18 +120,19 @@ const SECTIONS = updateSectionsWithPlugins({
       },
     ],
   },
-  updates: {
-    name: t`Updates`,
-    order: 3,
-    component: SettingsUpdatesForm,
-    settings: [
-      {
-        key: "check-for-updates",
-        display_name: t`Check for updates`,
-        type: "boolean",
-      },
-    ],
-  },
+  // #start# hide menu
+  // updates: {
+  //   name: t`Updates`,
+  //   order: 3,
+  //   component: SettingsUpdatesForm,
+  //   settings: [
+  //     {
+  //       key: "check-for-updates",
+  //       display_name: t`Check for updates`,
+  //       type: "boolean",
+  //     },
+  //   ],
+  // },
   email: {
     name: t`Email`,
     order: 4,
@@ -178,7 +179,7 @@ const SECTIONS = updateSectionsWithPlugins({
       {
         key: "email-from-address",
         display_name: t`From Address`,
-        placeholder: "metabase@yourcompany.com",
+        placeholder: "email@yourcompany.com",
         type: "string",
         required: true,
         validations: [["email", t`That's not a valid email address`]],
@@ -203,7 +204,7 @@ const SECTIONS = updateSectionsWithPlugins({
       {
         key: "map-tile-server-url",
         display_name: t`Map tile server URL`,
-        note: t`Metabase uses OpenStreetMaps by default.`,
+        note: t`App uses OpenStreetMaps by default.`, // #start# App from metabase
         type: "string",
       },
       {
@@ -321,7 +322,7 @@ const SECTIONS = updateSectionsWithPlugins({
       },
       {
         key: "enable-embedding",
-        display_name: t`Enable Embedding Metabase in other Applications`,
+        display_name: t`Enable Embedding in other Applications`,
         type: "boolean",
         getHidden: settings => !settings["enable-embedding"],
       },
@@ -355,12 +356,13 @@ const SECTIONS = updateSectionsWithPlugins({
       },
     ],
   },
-  license: {
-    name: t`License`,
-    order: 11,
-    component: SettingsLicense,
-    settings: [],
-  },
+  // #start# hide menu license
+  // license: {
+  //   name: t`License`,
+  //   order: 11,
+  //   component: SettingsLicense,
+  //   settings: [],
+  // },
   caching: {
     name: t`Caching`,
     order: 12,

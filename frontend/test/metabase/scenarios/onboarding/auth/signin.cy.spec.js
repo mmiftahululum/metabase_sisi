@@ -67,7 +67,7 @@ describe("scenarios > auth > signin", () => {
     cy.signOut();
     cy.reload();
 
-    cy.contains("Sign in to Metabase");
+    cy.contains("Sign in to App");
     cy.findByLabelText("Email address").type(admin.email);
     cy.findByLabelText("Password").type(admin.password);
     cy.findByText("Sign in").click();

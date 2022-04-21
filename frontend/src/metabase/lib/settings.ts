@@ -50,6 +50,7 @@ const PASSWORD_COMPLEXITY_CLAUSES = {
   },
 };
 
+// #start# definitions = definitions di backend ###
 // TODO: dump this from backend settings definitions
 export type SettingName =
   | "admin-email"
@@ -93,7 +94,9 @@ export type SettingName =
   | "premium-embedding-token"
   | "metabase-store-managed";
 
+// #start# mengarah ke sistem backend ###
 type SettingsMap = Record<SettingName, any>; // provides access to Metabase application settings
+// #end# mengarah ke sistem backend ###
 
 type SettingListener = (value: any) => void;
 
@@ -170,7 +173,10 @@ class Settings {
   }
 
   hideEmbedBranding() {
-    return this.get("hide-embed-branding?");
+    console.log("settings.ts hideembedbranding")
+    let ha = this.get("hide-embed-branding?");
+    console.log(ha);
+    return ha;
   }
 
   ldapEnabled() {
@@ -313,6 +319,7 @@ class Settings {
   }
 
   isEnterprise() {
+    // #start# default false
     return false;
   }
 

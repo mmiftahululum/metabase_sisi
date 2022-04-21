@@ -51,9 +51,9 @@ const LanguageStep = ({
   }
 
   return (
-    <ActiveStep title={t`What's your preferred language?`} label={1}>
+    <ActiveStep title={t`What's your preferred language test ?`} label={1}>
       <StepDescription>
-        {t`This language will be used throughout Metabase and will be the default for new users.`}
+        {t`This language will be used throughout App and will be the default for new users.`}
       </StepDescription>
       <LocaleGroup role="radiogroup">
         {locales.map(item => (
