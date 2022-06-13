@@ -320,7 +320,7 @@ class Settings {
 
   isEnterprise() {
     // #start# default false
-    return false;
+    return true;
   }
 
   isPaidPlan() {
