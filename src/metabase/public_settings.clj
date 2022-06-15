@@ -144,7 +144,7 @@
   (deferred-tru "The email address users should be referred to if they encounter a problem.")
   :visibility :authenticated)
 
-(defsetting to help you create seamless, interactiv
+(defsetting anon-tracking-enabled
   (deferred-tru "Enable the collection of anonymous usage data in order to help improve.")
   :type       :boolean
   :default    true
